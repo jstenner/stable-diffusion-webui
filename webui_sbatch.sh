@@ -27,7 +27,7 @@ echo -e "\nStarting Stable Diffusion WebUI on port ${port} on the $(hostname) se
 echo -e "\nSSH tunnel command:"
 echo -e "\tssh -NL ${port}:$(hostname):${port} ${USER}@hpg.rc.ufl.edu"
 echo -e "\nLocal browser URI:"
-echo -e "\thttp://localhost:${port}"
+echo -e "\thttp://0.0.0.0:${port}"
 host=$(hostname)
 python launch.py --listen --port ${port} --gradio-auth art4612:securit --disable-safe-unpickle
 
